@@ -16,6 +16,10 @@
   overflow: hidden;
 
 }
+section {
+  padding-top: 5em;
+
+}
 div.box p, div.boxs p, div.boxc  {
   text-align: center;
   font-family: Arial;
@@ -30,8 +34,13 @@ p.titulo {
   font-size:4em;
   letter-spacing: 0.05em;
 
-
 }
+
+
+.branding {
+display: flex;
+}
+
 p.titulo2 {
   font-family: Arial;
   text-align: center;
@@ -43,7 +52,6 @@ p.titulo2 {
 }
 div.hero.container {
   width:100% !important;
-  border-top:0.5em solid;
   border-top-color: var(--naranja);
   border-bottom:0.5em solid;
   border-bottom-color: var(--naranja);
@@ -51,20 +59,44 @@ div.hero.container {
 }
 
 .hero   {
-  display: block;
     height: 25rem;
     background-image: url(../img/header1.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+    padding-top: 5em;
+    min-width: 550px;
+
+
 
 }
 
 
 /*nav*/
 .containernav {
-  width:80%;
+  width:100% ;
   margin: auto;
+  display: flex;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: #ffffff;
+  border-bottom:0.5em solid;
+  border-bottom-color: var(--naranja);
+
+
+
+
+}
+
+i {
+  padding: 1em;
+  margin: 0;
+  font-size:2em;
+}
+
+.menu-toggle {
+  display: none;
 
 }
 .branding #logo {
@@ -75,10 +107,7 @@ div.hero.container {
   padding-bottom: 0.5em;
 
 }
-nav.links {
-  float: right;
 
-}
 .links ul li {
   display: inline-block;
   padding: 1em;
@@ -180,12 +209,11 @@ i:hover {
 
   }
   .hero   {
-      height: 20rem;
-      background-size: 100%;
-      width: auto;
+      background-size: cover;
 
 
   }
+
   p.titulo {
     margin-top: 1.5em;
     font-family: var(--fuente1);
@@ -193,6 +221,7 @@ i:hover {
     color: #ffffff;
     font-size:3em;
     letter-spacing: 0.05em;
+
 
 
   }
@@ -203,8 +232,33 @@ i:hover {
     font-weight:bold;
     font-size: 1.5em;
     line-height: 1.5;
+  }
+  .menu-toggle {
+    display: block;
+    float: right;
+
 
   }
+
+  .branding #logo {
+    width:200px;
+    height:100px;
+    padding-top: 0;
+    padding-bottom: 0.5em;
+    float: left;
+
+
+  }
+  header nav.active {
+    left: 0px;
+  }
+  #barra {
+    display:none;
+  }
+  .containernav {
+    width: 100%;
+  }
+
 
 }
   @media (max-width:1050px) {
@@ -216,16 +270,24 @@ i:hover {
     align-items: center;
 
   }
+
+  .menu-toggle {
+    display: block;
+    float: right;
+
+
+  }
+
   .branding #logo {
     width:200px;
     height:100px;
     padding-top: 0;
     padding-bottom: 0.5em;
-    flex-direction: column;
-    align-items: center;
-    align-items: center;
+    float: left;
+
 
   }
+
 
   .links ul li {
     display: inline-block;
@@ -236,6 +298,20 @@ i:hover {
     align-items: center;
 
   }
+  header nav.active {
+    left: 0px;
+  }
+  #barra {
+    display:none;
+  }
+  .containernav {
+    width: 100%;
+  }
 
+}
 
+@media (max-width:768px) {
+.hero {
+  display: none;
+}
 }

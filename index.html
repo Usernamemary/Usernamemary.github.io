@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="Usernamemary.github.io/css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 
 
 
@@ -14,27 +14,30 @@
 
   </head>
   <body>
-    <header class="site-header">
-      <div class="containernav" >
-      <div class="branding">
-        <img id="logo" src="img/logowow1503.svg" alt="Logo de Wow y regresar a inicio">
-      </div>
+    <div class="containernav" >
+    <div class="branding">
+      <a href="#nosotros"><img id="logo" src="img/logowow1503.svg"  alt="Logo de Wow y regresar a inicio"></a> </i>
+      <div class="menu-toggle" ><i class="fas fa-bars" aria-hidden="true"></i></div>
 
-      <nav class="links">
-
-        <ul>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#footer">Contactos</a></li>
-        </ul>
-      </nav>
-      </div>
-
-    <div class="hero container">
-      <p class="titulo">Diseños web únicos</p>
-      <p class="titulo2">Dale personalidad a tu web.</p>
     </div>
-  </header>
+    <nav class="links active" id="barra">
+
+      <ul>
+        <li><a href="#nosotros" >Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#footer">Contactos</a></li>
+
+      </ul>
+    </nav>
+
+    </div>
+
+      <div class="hero container">
+        <p class="titulo">Diseños web únicos</p>
+        <p class="titulo2">Dale personalidad a tu web.</p>
+      </div>
+
+
 
     <section class="nosotros container" id="nosotros">
 
@@ -43,16 +46,16 @@
 
 <div  id="box1">
 <img src="img/idea1603.svg" alt="Dibujo de foco con hoja, representa desarrollar ideas">
-<p>Desarrollamos tus ideas.</p>
+<p>Desarrollamos tus ideas</p>
 </div>
 <div  id="box2">
   <img src="img/observar1603.svg" alt="Dibujo de escudo y ojo, representa analizar y observar">
-  <p>Vemos más allá de lo evidente.</p>
+  <p>Vemos más alla de lo evidente</p>
 
 </div>
 <div  id="box3">
   <img src="img/box1503.svg" alt="Dibujo de una caja abierta, representa pensando fuera de la caja">
-  <p>Pensamos fuera de la caja.</p>
+  <p>Pensamos fuera de la caja</p>
 
 </div>
 </div>
@@ -68,7 +71,7 @@
   </div>
     <div  id="box4a">
   <p>Planeamos tu estrategia.<br>
-    Somos uno más del<strong> equipo</strong>.
+    Somos uno más del<strong> equipo</strong>
   <br>Tu agencia in house externa.</p>
   </div>
 
@@ -112,5 +115,20 @@
 
 </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+
+
+
+ <script>
+$(document).ready(function(){
+    $(".menu-toggle").click(function(){
+        $("#barra").toggle();
+    });
+});
+
+
+
+
+</script>
   </body>
 </html>
